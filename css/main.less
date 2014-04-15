@@ -7,6 +7,11 @@
   src: url(../fonts/clear_sans/ClearSans-Medium.ttf);
 }
 
+@font-face {
+  font-family: ClearSansBold;
+  src: url(../fonts/clear_sans/ClearSans-Bold.ttf);
+}
+
 @import url(http://fonts.googleapis.com/css?family=Scada:400,700&subset=latin,cyrillic);
 
 /* ==========================================================================
@@ -97,7 +102,7 @@ body {
     min-width: 1050px;
     height: 100%;
     background-color: @white;
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-family: "ClearSansMedium", Helvetica, Arial, sans-serif;
     font-size: 16px;
 }
 
@@ -179,6 +184,35 @@ a:hover {
     height: 16px;
     margin-top: 7px;
     background-position: 0 0;
+}
+
+.lnk-primary {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "ClearSansMedium", Helvetica, Arial, sans-serif;
+    color: @light-blue;
+    text-decoration: underline;
+}
+
+.lnk-title {
+    color: @black;
+    font-family: "ClearSansBold", Helvetica, Arial, sans-serif;
+    text-decoration: underline;
+}
+
+.lnk-title-18 {
+    font-size: 18px;
+}
+
+.lnk-title-22 {
+    font-size: 22px;
+}
+
+.separator {
+    display: block;
+    height: 2px;
+    border-bottom: 1px solid #fdfdfe;
+    background-color: #ededf4;
 }
 
 /* ==========================================================================
@@ -341,4 +375,87 @@ a:hover {
     a {
         color: #a9b0b3;
     }
+}
+
+/* ==========================================================================
+    MAIN
+========================================================================== */
+
+.block-2-thirds {
+    width: 664px;
+}
+
+.block-1-third {
+    width: 318px;
+}
+
+.block-light-gray {
+    @background-color: #f9f9fb;
+    background-color: @background-color;
+
+    .title-section-label-wrapper:after,
+    .lnk-all {
+        background-color: @background-color;
+    }
+}
+
+.block-gray {
+    @background-color: #f5f5f6;
+    background-color: @background-color;
+
+    .title-section-label-wrapper,
+    .lnk-all {
+        background-color: @background-color;
+    }
+}
+
+.block-shadowed {
+    .box-shadow(0 0 4px 1px #f1f1f1);
+}
+
+.title-section {
+    position: relative;
+    .separator;
+    margin: 30px 0;
+}
+
+.title-section-label {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: -17px;
+    height: 34px;
+    line-height: 32px;
+    padding: 0 20px 0 15px;
+    background-color: #05436f;
+    border-bottom: 2px solid @light-blue;
+    text-transform: uppercase;
+    color: @white;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .75);
+    font-weight: bold;
+    .scada;
+
+    &:after {
+        position: absolute;
+        top: 0;
+        right: -22px;
+        display: inline-block;
+        content: "";
+        width: 22px;
+        height: 34px;
+        background-image: url(../img/title-section-corner.png);
+        background-color: #f9f9fb;
+        background-repeat: no-repeat;
+        box-sizing: content-box;
+        padding-right: 15px;
+    }
+}
+
+.lnk-all {
+    .lnk-primary;
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    top: -12px;
+    padding: 0 5px 0 15px;
 }
