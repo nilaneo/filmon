@@ -3,6 +3,11 @@
 ========================================================================== */
 
 @font-face {
+  font-family: ClearSansRegular;
+  src: url(../fonts/clear_sans/ClearSans-Regular.ttf);
+}
+
+@font-face {
   font-family: ClearSansMedium;
   src: url(../fonts/clear_sans/ClearSans-Medium.ttf);
 }
@@ -25,6 +30,7 @@
 @dark-blue-2: #183152;
 @light-blue: #19b6e1;
 @red: #ff4552;
+@text: #111;
 
 .border-radius (@radius: 5px) {
     -webkit-border-radius: @radius;
@@ -102,8 +108,9 @@ body {
     min-width: 1050px;
     height: 100%;
     background-color: @white;
-    font-family: "ClearSansMedium", Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    color: @text;
+    font-family: "ClearSansRegular", Helvetica, Arial, sans-serif;
+    font-size: 13px;
 }
 
 ul,
@@ -188,13 +195,13 @@ a:hover {
 
 .lnk-primary {
     font-size: 14px;
-    font-weight: bold;
-    font-family: "ClearSansMedium", Helvetica, Arial, sans-serif;
+    font-family: "ClearSansRegular", Helvetica, Arial, sans-serif;
     color: @light-blue;
     text-decoration: underline;
 }
 
 .lnk-title {
+    display: block;
     color: @black;
     font-family: "ClearSansBold", Helvetica, Arial, sans-serif;
     text-decoration: underline;
@@ -210,7 +217,7 @@ a:hover {
 
 .separator {
     display: block;
-    height: 2px;
+    height: 3px;
     border-bottom: 1px solid #fdfdfe;
     background-color: #ededf4;
 }
@@ -258,7 +265,6 @@ a:hover {
     input {
         width: 346px;
         height: 28px;
-        line-height: 28px;
         background-color: transparent;
         border: 0;
         vertical-align: top;
@@ -458,4 +464,130 @@ a:hover {
     right: 0;
     top: -12px;
     padding: 0 5px 0 15px;
+}
+
+.block-tabs-right {
+    .left {
+        width: 336px;
+    }
+
+    .right {
+        width: 328px;
+    }
+}
+
+.img-shadowed {
+    img {
+        display: block;
+    }
+
+    width: 336px;
+    position: relative;
+    z-index: 2;
+}
+
+.img-shadowed:before,
+.img-shadowed:after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 8px;
+  width: 70%;
+  top: 80%;
+  max-width:323px;
+  background: #a2a2a3;
+  -webkit-box-shadow: 0 14px 7px #a2a2a3;
+  -moz-box-shadow: 0 14px 7px #a2a2a3;
+  box-shadow: 0 14px 7px #a2a2a3;
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+}
+
+.img-shadowed:after {
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  transform: rotate(5deg);
+  right: 8px;
+  left: auto;
+}
+
+.bordered {
+    position: absolute;
+    border-width: 0;
+    border-right-width: 3px;
+    border-style: solid;
+}
+
+.bordered-blue {
+    border-color: @light-blue;
+}
+
+.bookmarked {
+    position: relative;
+}
+
+.bookmark {
+    position: absolute;
+    display: inline-block;
+    height: 32px;
+    line-height: 30px;
+    padding: 0 15px;
+    color: @white;
+    font-size: 14px;
+    font-family: "ClearSansBold", Helvetica, Arial, sans-serif;
+}
+
+.bookmark-blue {
+    top: 10px;
+    right: 0;
+    background-color: @light-blue;
+}
+
+.film-description {
+    padding: 15px;
+    padding-right: 7px;
+    .lnk-title {
+        margin: 20px 0 30px;
+    }
+}
+
+.list-items {
+    list-style: none;
+    li {
+        padding: 0 15px 15px 20px;
+
+        &:after {
+            .separator;
+            content: "";
+            height: 2px;
+            margin-top: 15px;
+        }
+    }
+
+    li:last-child {
+        &:after{
+            display: none;
+        }
+    }
+
+    .is-active {
+        background-color: @light-blue;
+        color: @white;
+        padding-top: 10px;
+        margin-bottom: 15px;
+
+        .lnk-title {
+            color: @white;
+        }
+
+        &:after {
+            display: none;
+        }
+    }
 }
