@@ -708,34 +708,34 @@ a:focus {
     background-position: -48px 0;
 }
 
-.jcarousel-pagination {
+.jcarousel-pagination-wrapper {
     position: absolute;
     bottom: 40px;
-    right: 96px;
-    margin: 0 0 0 -22px;
-    font-size: 20px;
+    right: 20px;
+    width: 290px;
     z-index: 2;
+}
+
+.jcarousel-pagination {
+    text-align: center;
 
     a {
-        background: none repeat scroll 0 0 #FFFFFF;
-        border-radius: 10px;
-        box-shadow: 0 0 2px #4E443C;
-        color: #4E443C;
         display: inline-block;
+        margin-left: 10px;
         font-size: 11px;
         height: 10px;
-        line-height: 10px;
         margin-right: 7px;
         text-decoration: none;
         text-indent: -9999px;
         width: 10px;
+        height: 9px;
+        background-image: url(../img/jcarousel-pagination.png);
+        background-repeat: no-repeat;
+        background-position: 0 0;
     }
 
     a.active {
-        background: none repeat scroll 0 0 #4E443C;
-        box-shadow: 0 0 2px #F0EFE7;
-        color: #FFFFFF;
-        opacity: 1;
+        background-position: -22px 0;
     }
 }
 
