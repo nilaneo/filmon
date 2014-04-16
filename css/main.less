@@ -170,10 +170,15 @@ a:focus {
     font-family: "Scada", Helvetica, Arial, sans-serif;
 }
 
+.mb-50 {
+    margin-bottom: 50px;
+}
+
 .container {
     width: 1050px;
     margin: 0 auto;
     padding: 20px;
+    padding-bottom: 0;
 }
 
 .icon {
@@ -225,10 +230,6 @@ a:focus {
 .header {
     background: @blue;
     border-bottom: 3px solid @dark-blue;
-
-    .container {
-        padding-bottom: 0;
-    }
 }
 
 .header-top {
@@ -624,6 +625,10 @@ a:focus {
         bottom: -4px;
         background: url(../img/border-waves-bottom.png) repeat-x;
     }
+
+    .container {
+        padding-top: 0;
+    }
 }
 
 .slide {
@@ -651,7 +656,58 @@ a:focus {
     .img-shadowed:after {
       .box-shadow(0 14px 4px #a2a2a3);
     }
+}
 
+.slide-small {
+    position: relative;
+    width: 206px;
+    height: 306px;
+    border: 3px solid @white;
+    .box-shadow(0 0 3px 1px #d4d4d5);
+
+    img {
+        display: block;
+    }
+}
+
+.item-info {
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    width: 200px;
+    height: 94px;
+    padding: 10px 5px;
+    background-color: rgba(255, 255, 255, .9);
+}
+
+.slide-small-title {
+    margin: 0;
+    margin-bottom: 5px;
+    font-weight: normal;
+    a {
+        color: @light-blue;
+        font-size: 15px;
+        font-family: "ClearSansBold", Helvetica, Arial, sans-serif;
+        text-decoration: underline;
+    }
+}
+
+.short-info {
+    color: #1c0d00;
+    font-size: 13px;
+
+}
+
+.slide-small:hover {
+    border: 3px solid #ffcc00;
+
+    .item-info {
+        background-color: rgba(255, 204, 0, .9);
+    }
+
+    .slide-small-title a {
+        color: #05436f;
+    }
 }
 
 /* ==========================================================================
@@ -739,3 +795,53 @@ a:focus {
     }
 }
 
+/* Small Carousel
+========================================================================== */
+
+.jcarousel-small-wrapper {
+    position: relative;
+    height: 310px;
+    width: 664px;
+}
+
+.jcarousel-small {
+    position: relative;
+    overflow: hidden;
+}
+
+.jcarousel-small ul {
+    width: 10000px;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        float: left;
+        width: 206px;
+        height: 312px;
+        margin-right: 20px;
+        padding-top: 3px;
+    }
+}
+
+.jcarousel-small-control-prev,
+.jcarousel-small-control-next {
+    position: absolute;
+    display: inline-block;
+    width: 42px;
+    height: 40px;
+    margin-top: -20px;
+    top: 50%;
+    z-index: 2;
+}
+
+.jcarousel-small-control-prev {
+    .jcarousel-control-prev;
+    left: -20px;
+}
+
+.jcarousel-small-control-next {
+    .jcarousel-control-next;
+    right: -15px;
+}

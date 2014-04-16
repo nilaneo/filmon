@@ -20,6 +20,7 @@
         }
     }
 
+    /* Big slider */
 
     $('.jcarousel')
         .jcarousel({wrap: "circular"})
@@ -45,4 +46,15 @@
             return '<a href="#' + page + '">' + page + '</a>';
         }
     }); 
+
+    /* Small slider */
+
+    $('.jcarousel-small')
+        .jcarousel({wrap: "circular"})
+        .jcarouselAutoscroll({interval: 5000, autostart: false});
+
+    $('.jcarousel-small-control-prev').jcarouselControl({target: "-=1"});
+
+    $('.jcarousel-small-control-next').jcarouselControl({target: "+=1"});
+
 }());
