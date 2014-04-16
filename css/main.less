@@ -139,6 +139,11 @@ a:focus {
     outline: none;
 }
 
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
 .left {
     float: left;
 }
@@ -170,12 +175,24 @@ a:focus {
     font-family: "Scada", Helvetica, Arial, sans-serif;
 }
 
+.m-0 {
+    margin: 0 !important;
+}
+
 .mb-40 {
     margin-bottom: 40px;
 }
 
 .mb-70 {
     margin-bottom: 70px;
+}
+
+.pd-0 {
+    padding: 0 !important;
+}
+
+.pd-15 {
+    padding: 15px;
 }
 
 .container {
@@ -227,6 +244,64 @@ a:focus {
     background-color: #ededf4;
 }
 
+.text-black {
+    color: #010101;
+}
+
+.text-gray {
+    color: #a9b0b3;
+}
+
+.media { 
+    padding-bottom: 5px;
+    margin: 0;
+}
+
+.media,
+.bd {
+    overflow:hidden;
+    _overflow:visible;
+    zoom:1;
+}
+
+.media {
+    .img {
+        float:left;
+        margin-right: 10px;
+
+        img{display:block;}
+
+        .img-ext{float: right; margin-left: 10px;}
+    }
+}
+
+.bd-title {
+    font-size: 14px;
+    font-family: "ClearSansRegular", Helvetica, Arial, sans-serif;
+    text-decoration: underline;
+    
+    span {
+        display: block;
+    }
+}
+
+.bd-title-blue {
+    color: @light-blue;
+}
+
+.bd {
+    padding-top: 5px;
+    p {
+        font-size: 12px;
+        font-family: "ClearSansRegular", Helvetica, Arial, sans-serif;
+    }
+}
+
+.media-bg {
+    padding: 3px;
+    background-color: @white;
+}
+
 /* ==========================================================================
     HEADER
 ========================================================================== */
@@ -259,7 +334,7 @@ a:focus {
     border-bottom: 1px solid #487391;
     margin: 3px 0 0 95px;
     line-height: 30px;
-    background-color: @dark-blue-2;
+    background-color: #0b3d66;
     .border-radius(20px);
     .box-shadow(inset 0 1px 2px rgba(0, 0, 0, .47));
 
@@ -420,6 +495,10 @@ a:focus {
     }
 }
 
+.block-white {
+    background-color: @white;
+}
+
 .block-shadowed {
     .box-shadow(0 0 4px 1px #f1f1f1);
 }
@@ -469,6 +548,15 @@ a:focus {
     right: 0;
     top: -12px;
     padding: 0 5px 0 15px;
+}
+
+.lnk-all-small {
+    .lnk-primary;
+    position: absolute;
+    display: inline-block;
+    bottom: 10px;
+    right: 15px;
+    font-size: 12px;
 }
 
 .block-tabs-right {
@@ -668,6 +756,7 @@ a:focus {
     height: 306px;
     border: 3px solid @white;
     .box-shadow(0 0 3px 1px #d4d4d5);
+    .transition(all .3s);
 
     img {
         display: block;
@@ -682,6 +771,7 @@ a:focus {
     height: 94px;
     padding: 10px 5px;
     background-color: rgba(255, 255, 255, .9);
+    .transition(all .3s);
 }
 
 .slide-small-title {
@@ -723,6 +813,131 @@ a:focus {
         display: block;
     }
 }
+
+/* ==========================================================================
+    LISTS
+========================================================================== */
+
+.list-1 {
+    li {
+        margin-bottom: 5px;
+    }
+
+    .img-shadowed {
+        &:before,
+        &:after {
+            top: 75%;
+            bottom: 0;
+            .box-shadow(0 2px 2px #A2A2A3);
+        }
+    }
+}
+
+.list-2 {
+
+    li:first-child {
+        margin-top: 10px;
+    }
+
+    li {
+        position: relative;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+    }
+
+    .img-shadowed {
+        &:before,
+        &:after {
+            top: 75%;
+            bottom: 4px;
+            .box-shadow(0 2px 3px #A2A2A3);
+        }
+    }
+}
+
+.corner {
+    position: absolute;
+    right: 0;
+    bottom: 5px;   
+}
+
+.corner-triangle {
+    width: 50px;
+    height: 51px;
+    line-height: 70px;
+    padding: 0 8px 0 34px;
+    background: url(../img/corner-triangle.png) no-repeat;
+    color: #054674;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 0 -1px #fff100;
+    .scada;
+}
+
+/* ==========================================================================
+    SIDEBAR
+========================================================================== */
+
+.sidebar {
+    padding-top: 30px;
+}
+
+.block-aside {
+    position: relative;
+    padding-bottom: 24px;
+    margin-bottom: 40px;
+}
+
+.block-bordered {
+    border: 1px solid #dadada;
+}
+
+.sidebar-title {
+    height: 33px;
+    line-height: 33px;
+    text-transform: uppercase;
+    color: @white;
+    font-size: 16px;
+    font-weight: bold;
+    .scada;
+
+    .left {
+        width: 70px;
+        text-align: center;
+    }
+
+    .right {
+        width: 218px;
+        padding-left: 15px;
+    }
+}
+
+.sidebar-title-red {
+    background-color: @red;
+    text-shadow: 0 1px rgba(0, 0, 0, .25);
+}
+
+.sidebar-title-blue {
+    background-color: #05436f;
+    text-shadow: 0 1px rgba(0, 0, 0, .75);
+}
+
+.sidebar-title-yellow {
+    background-color: #fc0;
+    color: #054674;
+    text-shadow: 0 -1px #fff100;
+}
+
+.sidebar-title-wide {
+    .left {
+        width: 83px;
+    }
+
+    .right {
+       width: 233px; 
+    }
+}
+
 
 /* ==========================================================================
     Carousel
