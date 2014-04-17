@@ -111,7 +111,7 @@ body {
     background-color: @white;
     color: @text;
     font-family: "ClearSansRegular", Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 ul,
@@ -143,6 +143,10 @@ a:focus {
 ul {
     padding-left: 0;
     list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
 }
 
 .left {
@@ -237,11 +241,15 @@ ul {
     text-decoration: underline;
 }
 
-.lnk-title-18 {
+.title-18 {
     font-size: 18px;
 }
 
-.lnk-title-22 {
+.title-14 {
+    font-size: 14px;
+}
+
+.title-22 {
     font-size: 22px;
 }
 
@@ -790,7 +798,6 @@ ul {
 
 .bookmark {
     position: absolute;
-    right: 0;
     display: inline-block;
     height: 32px;
     line-height: 30px;
@@ -798,6 +805,10 @@ ul {
     color: @white;
     font-size: 14px;
     font-family: "ClearSansBold", Helvetica, Arial, sans-serif;
+}
+
+.bookmark-right {
+    right: 0;
 }
 
 .bookmark-blue {
@@ -1039,6 +1050,129 @@ ul {
 .blue-area {
     background-color: @dark-blue-3;
     padding-bottom: 20px;
+}
+
+/* ==========================================================================
+    One serial
+========================================================================== */
+
+.title-main {
+    .title-22;
+    margin-bottom: 5px;
+}
+
+.title-extra {
+    .text-gray;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.main-overview {
+    width: 310px;
+}
+
+.row {
+    display: table-row;
+}
+
+.row {
+    .lnk-all-small {
+        position: static;
+        display: block;
+        text-align: right;
+        margin: 10px 0;
+    }
+}
+
+.cell {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.main-overview-cell {
+    padding-right: 12px;
+}
+
+.main-overview-cell-first {
+    width: 120px;
+    .text-gray;
+    font-size: 14px;
+}
+
+.award {
+    position: relative;
+    top: 10px;
+    display: inline-block;
+    margin: 10px 30px 10px 0;
+}
+
+.award-oscar {
+    width: 38px;
+    height: 114px;
+    background: url(../img/oscar.png) no-repeat;
+}
+
+.awards-quantity {
+    position: absolute;
+    bottom: -3px;
+    right: -20px;
+    width: 40px;
+    height: 40px;
+    background: url(../img/round.png) no-repeat;
+    text-align: center;
+    line-height: 40px;
+    color: #054674;
+    font-size: 18px;
+    .scada;
+}
+
+.raiting-wrapper {
+    position: relative;
+    .bookmark {
+        left: -25px;
+        width: 70px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+.raiting {
+    padding-left: 90px;
+    margin-bottom: 20px;
+    .text-black;
+    .votes {
+        float: right;
+        .text-gray;
+        .text-small;
+    }
+}
+
+.stars {
+    .list-inline;
+    a {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background-image: url(../img/sprite-icons.png);
+        background-repeat: no-repeat;
+        background-position: -38px 0;
+        span {
+            visibility: hidden;
+        }
+    }
+}
+
+.info-small {
+    padding: 15px 5px;
+    background-color: #f5f9fc;
+    color: #051b39;
+    font-size: 11px;
+    a {
+        font-size: 11px;
+    }
 }
 
 /* ==========================================================================
