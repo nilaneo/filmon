@@ -47,7 +47,7 @@
         }
     }); 
 
-    /* Small slider */
+    /* Small slider - 3 slides*/
 
     $('.jcarousel-small')
         .jcarousel({wrap: "circular"})
@@ -56,5 +56,15 @@
     $('.jcarousel-small-control-prev').jcarouselControl({target: "-=1"});
 
     $('.jcarousel-small-control-next').jcarouselControl({target: "+=1"});
+
+    /* Medium slider - 2 slides */
+
+    $('.jcarousel-medium')
+        .jcarousel({wrap: "circular"})
+        .jcarouselAutoscroll({interval: 5000, autostart: false});
+
+    $('.jcarousel-medium-control-prev').jcarouselControl({target: "-=1"});
+
+    $('.jcarousel-medium-control-next').jcarouselControl({target: "+=1"});
 
 }());
