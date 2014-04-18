@@ -1297,6 +1297,53 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 15px;
 }
 
+/* PAGINATION
+========================================================================== */
+
+.pagination {
+    margin-top: 25px;
+    text-align: center;
+    ul {
+        .list-inline;
+        list-style-type: none;
+    }
+
+    a {
+        padding: 0 7px;
+        color: @light-blue;
+        font-size: 15px;
+        line-height: 18px;
+        font-family: "ClearSansMedium", Helvetica, Arial, sans-serif;
+        .transition(all .1s);
+    }
+
+    a:hover,
+    a.is-current {
+        background-color: @light-blue;
+        color: @white;
+    }
+
+    .prev-page,
+    .next-page {
+        .inline-block;
+        padding-top: 2px;
+    }
+
+    .icon-arrow-left {
+        width: 10px;
+        height: 14px;
+        background-position: -25px -43px;
+        vertical-align: middle;
+    }
+
+    .icon-arrow-right {
+        width: 10px;
+        height: 14px;
+        background-position: -34px -43px;
+        vertical-align: middle;
+    }
+}
+
 /* ==========================================================================
     LISTS
 ========================================================================== */
