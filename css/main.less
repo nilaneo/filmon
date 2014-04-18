@@ -635,8 +635,6 @@ h1, h2, h3, h4, h5, h6 {
             width: 1px;
             height: 14px;
             margin: 0 16px;
-            border-right: 1px solid #ffe57a;
-            background-color: #e9aa00;
             content: "";
         }
     }
@@ -705,6 +703,15 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 48px;
 }
 
+.block-text {
+    position: relative;
+    margin-top: 10px;
+    padding-bottom: 2px;
+    p {
+        margin-bottom: 20px;
+    }
+}
+
 .title-section {
     position: relative;
     .separator;
@@ -759,6 +766,15 @@ h1, h2, h3, h4, h5, h6 {
     bottom: 10px;
     right: 15px;
     font-size: 12px;
+
+    ins {
+        .icon;
+        width: 10px;
+        height: 14px;
+        margin: 0 0 1px 3px;
+        background-position: -75px 0;
+        vertical-align: text-bottom;
+    }
 }
 
 .block-tabs-right {
@@ -970,6 +986,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .lnk-slide {
     display: block;
+    .transition(all .3);
 }
 
 .slide {
@@ -1227,7 +1244,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .info-small {
-    padding: 12px 5px;
+    padding: 12px;
     background-color: #f5f9fc;
     color: #051b39;
     font-size: 11px;
@@ -1238,8 +1255,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .panel {
     height: 53px;
-    background-color: @yellow;
     border-bottom: 3px solid #054674;
+}
+
+.panel-yellow {
+    background-color: @yellow;
+    .panel-menu {
+        li:before {
+            border-right: 1px solid #ffe57a;
+            background-color: #e9aa00;
+        }
+    }
 }
 
 /* ==========================================================================
@@ -1618,6 +1644,28 @@ h1, h2, h3, h4, h5, h6 {
 .jcarousel-small-control-next {
     .jcarousel-control-next;
     right: -15px;
+}
+
+.slides-title-bottom {
+
+    ul {
+
+        li {
+            height: 340px;
+        }
+
+        .slide-small-title {
+            position: absolute;
+            bottom: -35px;
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+        }
+
+        .lnk-slide:hover {
+            .opacity(.5);
+        }
+    }
 }
 
 /* Medium Carousel (2 slides)
