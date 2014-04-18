@@ -695,7 +695,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .block-shadowed {
-    .box-shadow(0 0 4px 1px #f1f1f1);
+    .box-shadow(0 0 4px rgba(0, 0, 0, .4));
 }
 
 .block-lower {
@@ -1266,6 +1266,35 @@ h1, h2, h3, h4, h5, h6 {
             background-color: #e9aa00;
         }
     }
+}
+
+/*Comments
+========================================================================== */
+
+.list-comments {
+    margin-top: 15px;
+    .media {
+        padding-bottom: 0;
+        .img {
+            margin: 3px;
+            margin-right: 15px;
+        }
+    }
+}
+
+.comment-text {
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.avatar {
+    border: 3px solid @white;
+    .block-shadowed;
+}
+
+.block-border-top {
+    border-top: 2px solid #e9ebec;
+    padding-top: 15px;
 }
 
 /* ==========================================================================
