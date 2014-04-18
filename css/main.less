@@ -32,6 +32,7 @@
 @light-blue: #19b6e1;
 @red: #ff4552;
 @text: #111;
+@yellow: #fc0;
 
 .border-radius (@radius: 5px) {
     -webkit-border-radius: @radius;
@@ -182,6 +183,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .m-0 {
     margin: 0 !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
 }
 
 .mb-40 {
@@ -602,6 +607,48 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.panel-menu {
+    li {
+        position: relative;
+        padding-left: 34px;
+
+        a, >span {
+            color: @black;
+            font-size: 15px;
+            font-family: "ClearSansMedium", Helvetica, Arial, sans-serif;
+            line-height: 53px;
+        }
+
+        a:hover {
+            color: #054674;
+        }
+
+        .disabled {
+            color: rgba(0, 0, 0, .65);
+        }
+
+        &:before {
+            position: absolute;
+            display: inline-block;
+            top: 20px;
+            left: 0;
+            width: 1px;
+            height: 14px;
+            margin: 0 16px;
+            border-right: 1px solid #ffe57a;
+            background-color: #e9aa00;
+            content: "";
+        }
+    }
+
+    li:first-child {
+        padding-left: 15px;
+        &:before {
+            display: none;
+        }
+    }
+}
+
 /* ==========================================================================
     MAIN
 ========================================================================== */
@@ -651,6 +698,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .block-shadowed {
     .box-shadow(0 0 4px 1px #f1f1f1);
+}
+
+.block-lower {
+    padding: 10px 15px;
+    margin-top: 48px;
 }
 
 .title-section {
@@ -992,7 +1044,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .slide-small:hover {
-    border: 3px solid #ffcc00;
+    border: 3px solid @yellow;
 
     .item-info {
         background-color: rgba(255, 204, 0, .9);
@@ -1022,7 +1074,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .slide-medium:hover {
-    border: 3px solid #ffcc00;
+    border: 3px solid @yellow;
 
     .item-info {
         background-color: rgba(255, 204, 0, .9);
@@ -1184,6 +1236,12 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.panel {
+    height: 53px;
+    background-color: @yellow;
+    border-bottom: 3px solid #054674;
+}
+
 /* ==========================================================================
     LISTS
 ========================================================================== */
@@ -1246,6 +1304,10 @@ h1, h2, h3, h4, h5, h6 {
             bottom: 1px;
         }
     }
+
+    .bd {
+        padding-top: 15px;
+    }
 }
 
 .corner {
@@ -1272,8 +1334,72 @@ h1, h2, h3, h4, h5, h6 {
     height: 94px;
     line-height: 94px;
     text-align: center;
-    background-color: #fc0;
+    background-color: @yellow;
     .box-shadow(-1px 0 1px #ebebeb);
+}
+
+.list-social {
+    .list-inline;
+    li {
+        height: 50px;
+        margin-right: 10px;
+        padding-top: 13px;
+    }
+}
+
+.socials-quantity {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    line-height: 19px;
+    vertical-align: text-top;
+    padding: 0 5px;
+    margin-left: 5px;
+    margin-top: -5px;
+    background-color: @white;
+    font-size: 12px;
+    color: #054674;
+    font-family: "ClearSansMedium", Helvetica, Arial, sans-serif;
+    &:before {
+        position: absolute;
+        left: -7px;
+        width: 0;
+        height: 0;
+        content: "";
+        border-style: solid;
+        border-width: 10px 7px 10px 0;
+        border-color: transparent @white transparent transparent;
+    }
+}
+
+.i-odn {
+    width: 22px;
+    height: 23px;
+    background-position: 0 -18px;
+}
+
+.i-fb {
+    width: 24px;
+    height: 23px;
+    background-position: -22px -19px;
+}
+
+.i-vk {
+    width: 24px;
+    height: 23px;
+    background-position: -45px -18px;
+}
+
+.i-tw {
+    width: 24px;
+    height: 23px;
+    background-position: -70px -18px;
+}
+
+.i-gp {
+    width: 24px;
+    height: 23px;
+    background-position: 0 -42px;
 }
 
 /* ==========================================================================
@@ -1328,7 +1454,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sidebar-title-yellow {
-    background-color: #fc0;
+    background-color: @yellow;
     color: #054674;
     text-shadow: 0 -1px #fff100;
 }
@@ -1356,10 +1482,6 @@ h1, h2, h3, h4, h5, h6 {
     height: 56px;
     background: @blue;
     border-top: 3px solid @dark-blue;
-}
-
-.nav-footer {
-
 }
 
 /* ==========================================================================
