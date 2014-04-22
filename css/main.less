@@ -583,8 +583,8 @@ h1, h2, h3, h4, h5, h6 {
         display: inline-block;
         vertical-align: top;
         position: relative;
-        top: -23px;
-        height: 30px;
+        top: -3px;
+        height: 40px;
         padding-right: 15px;
         line-height: 50px;
         color: #a9b0b3;
@@ -1139,6 +1139,37 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 20px;
 }
 
+.tabs-top {
+    li {
+        float: left;
+        height: 30px;
+        a {
+            display: inline-block;
+            padding: 0 15px;
+            color: @light-blue;
+            font-size: 15px;
+            line-height: 30px;
+            font-family: "ClearSansMedium", Helvetica, Arial, sans-serif;
+            text-decoration: underline;
+            background-color: #f5f5f6;
+        }
+    }
+}
+
+.tabs-yellow {
+    border-bottom: 3px solid @yellow;
+    a:hover,
+    a.is-active {
+        color: #054674;
+    }
+
+    a.is-active {
+        background-color: @yellow;
+        text-shadow: 0 -1px #fff100;
+        text-decoration: none;
+    }
+}
+
 /* ==========================================================================
     One serial
 ========================================================================== */
@@ -1304,10 +1335,14 @@ h1, h2, h3, h4, h5, h6 {
         height: 18px;
         background-image: url(../img/sprite-icons.png);
         background-repeat: no-repeat;
-        background-position: -38px 0;
+        background-position: -57px 0;
         span {
             visibility: hidden;
         }
+    }
+
+    .full {
+        background-position: -38px 0;
     }
 }
 
@@ -1677,6 +1712,10 @@ h1, h2, h3, h4, h5, h6 {
     height: 56px;
     background: @blue;
     border-top: 3px solid @dark-blue;
+
+    .container {
+        padding-top: 0;
+    }
 }
 
 /* ==========================================================================
