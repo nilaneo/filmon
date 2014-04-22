@@ -1125,12 +1125,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .block-ad {
-    height: 126px;
     padding: 9px;
     border: 1px solid #e5e7e8;
     margin: 50px 0 70px;    
     img {
         display: block;
+        margin: 0 auto;
     }
 }
 
@@ -1170,13 +1170,66 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* Slider-vertical
+========================================================================== */
+
+.slider-vertical.gray-area {
+    padding: 25px 0 50px;
+
+    &:before {
+        display: none;
+    }
+
+    h1 {
+        margin: 0 0 10px 10px;
+    }
+}
+
+.slider-vertical {
+    .right {
+        width: 343px;
+    }
+}
+
+.slides-video-big {
+    position: relative;
+    width: 667px;
+    height: 350px;
+    list-style: none;
+    li {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    li.is-active {
+        display: block;
+    }
+}
+
 /* ==========================================================================
     One serial
 ========================================================================== */
 
-.title-main {
+.title-main{
     .title-22;
     margin-bottom: 5px;
+    ins {
+        .icon;
+        width: 10px;
+        height: 14px;
+        margin: 0 5px;
+        background-position: -75px -49px;
+    }
+}
+
+.title-main a {
+    .title-22;
+    color: @black;
+    text-decoration: underline;
 }
 
 .title-extra {
@@ -1925,4 +1978,95 @@ h1, h2, h3, h4, h5, h6 {
 .jcarousel-medium-control-next {
     .jcarousel-control-next;
     right: -15px;
+}
+
+/* Vertical Carousel
+========================================================================== */
+
+.v-jcarousel-wrapper {
+    height: 350px;
+}
+
+.v-jcarousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.v-jcarousel ul {
+    height: 350px;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        height: 87px;
+        padding: 4px 0 4px 20px;
+        margin-bottom: 1px;
+        box-sizing: content-box;
+
+        a {
+            display: inline-block;
+            vertical-align: top;
+            font-family: "ClearSansBold", Helvetica, Arial, sans-serif;
+        }
+
+        .slide-video {
+            margin-right: 15px;
+        }
+
+        .video-name {
+           color: @black;
+           font-size: 15px;
+           text-decoration: underline; 
+        }
+    }
+
+    li.is-active {
+        background-color: @light-blue;
+        .video-name {
+            color: @white;
+            text-decoration: none;
+        }
+    }
+}
+
+.v-jcarousel-control-prev,
+.v-jcarousel-control-next {
+    position: absolute;
+    right: 140px;
+    width: 50px;
+    height: 50px;
+    cursor: inherit;
+
+    span {
+        .icon;
+        width: 50px;
+        height: 50px;
+    }
+
+    &:hover {
+        .icon;
+        background-position: 0 -97px;
+    }
+}
+
+.v-jcarousel-control-prev {
+    top: 10px;
+    span {
+        background-position: -51px -63px;
+    }
+}
+
+.v-jcarousel-control-next {
+    bottom: 10px;
+    span {
+        background-position: -51px -92px;
+    }
+}
+
+.slide-video {
+    img {
+        display: block;
+    }
 }

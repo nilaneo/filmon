@@ -67,4 +67,13 @@
 
     $('.jcarousel-medium-control-next').jcarouselControl({target: "+=1"});
 
+    /* Vertical slider */
+
+    $('.v-jcarousel')
+        .jcarousel({wrap: "circular", vertical: true});
+
+    $('.v-jcarousel-control-prev').jcarouselControl({target: "-=1"});
+
+    $('.v-jcarousel-control-next').jcarouselControl({target: "+=1"});
+
 }());
