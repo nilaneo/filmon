@@ -9,12 +9,15 @@
 
 @font-face {
   font-family: ClearSansMedium;
-  src: url(../fonts/clear_sans/ClearSans-Medium.ttf);
+  src:  url('../fonts/ClearSans-Medium/ClearSans-Medium.eot?') format('eot'), 
+        url('../fonts/ClearSans-Medium/ClearSans-Medium.woff') format('woff'), 
+        url('../fonts/ClearSans-Medium/ClearSans-Medium.ttf')  format('truetype'),
+        url('../fonts/ClearSans-Medium/ClearSans-Medium.svg#ClearSans-Medium') format('svg');
 }
 
 @font-face {
   font-family: ClearSansBold;
-  src: url(../fonts/clear_sans/ClearSans-Bold.ttf);
+  src: url(../fonts/clear-sans/ClearSans-Bold.ttf);
 }
 
 @import url(http://fonts.googleapis.com/css?family=Scada:400,700&subset=latin,cyrillic);
@@ -237,6 +240,10 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "ClearSansRegular", Helvetica, Arial, sans-serif;
     color: @light-blue;
     text-decoration: underline;
+
+    &:hover {
+        color: @dark-blue-3;
+    }
 }
 
 .lnk-title {
@@ -316,6 +323,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .bd-title-blue {
     color: @light-blue;
+
+    &:hover {
+        color: @dark-blue-3;
+    }
 }
 
 .bd-title-black {
@@ -1210,6 +1221,13 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.slide-video {
+    cursor: pointer;
+    img {
+        display: block;
+    }
+}
+
 /* ==========================================================================
     One serial
 ========================================================================== */
@@ -1815,7 +1833,10 @@ h1, h2, h3, h4, h5, h6 {
     left: 10px;
     background-image: url(../img/carousel-buttons.png);
     background-repeat: no-repeat;
-    background-position: 0 0;
+
+    &:hover {
+        background-position: 0 -46px;
+    }
 }
 
 .jcarousel-control-next {
@@ -1823,6 +1844,10 @@ h1, h2, h3, h4, h5, h6 {
     background-image: url(../img/carousel-buttons.png);
     background-repeat: no-repeat;
     background-position: -48px 0;
+
+    &:hover {
+        background-position: -48px -46px;
+    }
 }
 
 .jcarousel-pagination-wrapper {
@@ -2011,7 +2036,7 @@ h1, h2, h3, h4, h5, h6 {
             font-family: "ClearSansBold", Helvetica, Arial, sans-serif;
         }
 
-        .slide-video {
+        .video-pic {
             margin-right: 15px;
         }
 
@@ -2019,6 +2044,10 @@ h1, h2, h3, h4, h5, h6 {
            color: @black;
            font-size: 15px;
            text-decoration: underline; 
+        }
+
+        &:hover .video-name {
+            color: @light-blue;
         }
     }
 
@@ -2062,11 +2091,5 @@ h1, h2, h3, h4, h5, h6 {
     bottom: 10px;
     span {
         background-position: -51px -92px;
-    }
-}
-
-.slide-video {
-    img {
-        display: block;
     }
 }
