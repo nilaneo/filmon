@@ -130,6 +130,17 @@ body {
     font-size: 14px;
 }
 
+.page-wrapper {
+    min-height: 100%;
+    margin-bottom: -56px;
+
+    &:after {
+        content: "";
+        display: block;
+        height: 56px;
+    }
+}
+
 ul,
 p {
     margin: 0;
@@ -2138,7 +2149,7 @@ h1, h2, h3, h4, h5, h6 {
 ========================================================================== */
 
 .footer {
-    height: 59px;
+    height: 56px;
     background: @blue;
     border-top: 3px solid @dark-blue;
 
