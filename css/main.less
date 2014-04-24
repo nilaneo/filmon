@@ -462,6 +462,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-user-menu {
+    a {
+        color: @light-blue;
+        text-shadow: 1px 0 0 rgba(121, 177, 6, .75);
+        font-size: 14px;
+        font-family: 'ClearSansMedium', Helvetica, Arial, sans-serif;
+    }
+
     ul {
         list-style: none;
         padding-left: 0;
@@ -482,20 +489,37 @@ h1, h2, h3, h4, h5, h6 {
                 border-right: 1px solid #095a86;
                 background-color: @dark-blue-2;
                 content: "";
-            }
-
-            a {
-                color: @light-blue;
-                text-shadow: 1px 0 0 rgba(121, 177, 6, .75);
-                font-size: 14px;
-                font-family: 'ClearSansMedium', Helvetica, Arial, sans-serif;
-            }
+            }            
         }
 
         li:first-child {
             &:before {
                 display: none;
             }
+        }
+    }
+
+    .user {
+        a {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .avatar {
+            margin-right: 10px;
+            width: 30px;
+            height: 33px;
+        }
+
+        .user-name {
+            text-decoration: underline;
+           ins {
+                .icon;
+                width: 14px;                    
+                height: 10px;
+                margin-left: 4px;
+                background-position: -26px -154px;
+           }
         }
     }
 }
@@ -1693,6 +1717,7 @@ h1, h2, h3, h4, h5, h6 {
     boredr-style: solid;
     border-color: @white;
     .block-shadowed;
+    box-sizing: content-box !important;
 }
 
 .block-border-top {
