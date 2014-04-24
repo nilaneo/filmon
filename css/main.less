@@ -227,8 +227,8 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 !important;
 }
 
-.pdt-10 {
-    padding-top: 10px !important;
+.pd-15 {
+    padding: 15px !important;
 }
 
 .border-dark {
@@ -1869,6 +1869,35 @@ h1, h2, h3, h4, h5, h6 {
 
     span {
         margin: 10px;
+    }
+}
+
+.block-img-title {
+    display: inline-block;
+    .img-shadowed:before,
+    .img-shadowed:after {
+      .box-shadow(0 14px 4px #a2a2a3);
+    }
+
+    h2 {
+        font-weight: normal;
+        margin-top: 5px;
+    }
+
+    a {
+        .lnk-primary;
+        font-size: 18px;
+    }
+}
+
+.list-tops {
+    li {
+        float: left;
+        margin-left: 18px;
+    }
+
+    li:first-child {
+        margin-left: 0;
     }
 }
 
