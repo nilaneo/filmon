@@ -8,7 +8,7 @@ $(document).ready(function(){
 		$(".slides-video-big").find("." + activeSlide + "-big").addClass("is-active");
 	});
 
-	//Multiple navigation
+	// Multiple navigation
 
 	$(".has-nav-inner").hover(
 		function() {
@@ -23,4 +23,12 @@ $(document).ready(function(){
 			$(this).children("a").removeClass("is-open");
 		}
 	);
+
+	// Custom checkbox
+
+	$(".custom-checkbox").on("click", function (e) {
+		e.preventDefault();
+		$(this).toggleClass("is-checked");
+	});
+
 });
