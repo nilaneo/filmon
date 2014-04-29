@@ -262,6 +262,14 @@ h1, h2, h3, h4, h5, h6 {
     background-position: -21px 6px;
 }
 
+.icon-edit {
+    width: 16px;
+    height: 20px;
+    margin: 3px;
+    background-position: -62px -231px;
+    vertical-align: middle;
+}
+
 .lnk-primary {
     font-size: 14px;
     font-family: 'ClearSansRegular', Helvetica, Arial, sans-serif;
@@ -898,7 +906,8 @@ h1, h2, h3, h4, h5, h6 {
     background-color: @background-color;
 
     .title-section-label:after,
-    .lnk-all {
+    .lnk-all,
+    .title-main-bg  {
         background-color: @background-color;
     }
 }
@@ -908,7 +917,8 @@ h1, h2, h3, h4, h5, h6 {
     background-color: @background-color;
 
     .title-section-label:after,
-    .lnk-all {
+    .lnk-all,
+    .title-main-bg  {
         background-color: @background-color;
     }
 }
@@ -918,7 +928,8 @@ h1, h2, h3, h4, h5, h6 {
     background-color: @background-color;
 
     .title-section-label:after,
-    .lnk-all {
+    .lnk-all,
+    .title-main-bg {
         background-color: @background-color;
     }
 
@@ -1015,6 +1026,18 @@ h1, h2, h3, h4, h5, h6 {
         background-position: -75px 0;
         vertical-align: text-bottom;
     }
+}
+
+.title-main-bg {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: -17px;
+    height: 34px;
+    line-height: 32px;
+    padding-right: 20px;
+    font-weight: bold;
+    color: @black;
 }
 
 .block-tabs-right {
@@ -1274,6 +1297,12 @@ h1, h2, h3, h4, h5, h6 {
     img {
         display: block;
     }
+}
+
+.slide-small-5 {
+    .slide-small;
+    width: 114px;
+    height: 166px;
 }
 
 .item-info {
@@ -1762,6 +1791,11 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 15px;
 }
 
+.title-comment {
+    margin-bottom: 10px;
+    font-family: 'ClearSansMedium', Helvetica, Arial, sans-serif;
+}
+
 .avatar {
     border-width: 3px;
     boredr-style: solid;
@@ -1793,7 +1827,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 5px;
 }
 
-.block-settings {
+.block-img-left {
     padding-left: 164px;
 }
 
@@ -1901,6 +1935,29 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* User page
+========================================================================== */
+
+.list-wider {
+    width: 460px;
+
+    .row {
+        height: 28px;
+        line-height: 28px;
+    }
+}
+
+.list-wider-cell {
+    padding-right: 20px;
+}
+
+.list-wider-cell-first {
+    width: 180px;
+    .text-gray;
+    font-size: 14px;
+}
+
+
 /* PAGINATION
 ========================================================================== */
 
@@ -1947,14 +2004,14 @@ h1, h2, h3, h4, h5, h6 {
     .icon-arrow-left {
         width: 30px;
         height: 30px;
-        background-position: 1px -71px;
+        background-position: 1px -260px;
         vertical-align: middle;
     }
 
     .icon-arrow-right {
         width: 30px;
         height: 30px;
-        background-position: -27px -71px;
+        background-position: -27px -260px;
         vertical-align: middle;
     }
 
@@ -2421,7 +2478,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* Small Carousel
+/* Small Carousel (3 slides)
 ========================================================================== */
 
 .jcarousel-small-wrapper {
@@ -2492,6 +2549,75 @@ h1, h2, h3, h4, h5, h6 {
             .opacity(.5);
         }
     }
+}
+
+/* Small Carousel (5 slides)
+========================================================================== */
+
+.jcarousel-5-wrapper {
+    position: relative;
+    height: 210px;
+    width: 664px;
+}
+
+.jcarousel-5 {
+    position: relative;
+    overflow: hidden;
+}
+
+.jcarousel-5 ul {
+    width: 10000px;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        float: left;
+        width: 106px;
+        height: 204px;
+        margin-right: 30px;
+        padding-top: 3px;
+    }
+
+    .slide-small-title {
+        position: absolute;
+        bottom: -42px;
+        display: inline-block;
+        width: 114px;
+        height: 30px;
+        text-align: left;
+        line-height: 14px;
+        a {
+            font-size: 11px;
+            vertical-align: top;
+        }
+
+        a:hover {
+
+        }
+    }
+
+    .slide-small-5:hover {
+        .slide-small-title a {
+            color: @dark-blue-3;
+        }
+    }
+}
+
+.jcarousel-5-control-prev,
+.jcarousel-5-control-next {
+    top: 42% !important;
+}
+
+.jcarousel-5-control-prev {
+    .jcarousel-control-prev;
+    left: -20px;
+}
+
+.jcarousel-5-control-next {
+    .jcarousel-control-next;
+    right: -15px;
 }
 
 /* Medium Carousel (2 slides)
