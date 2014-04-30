@@ -323,13 +323,17 @@ h1, h2, h3, h4, h5, h6 {
     color: #a9b0b3;
 }
 
+.text-medium {
+    font-family: 'ClearSansMedium', Helvetica, Arial, sans-serif;
+}
+
 .media { 
     padding-bottom: 5px;
     margin: 0;
 
-    .bordered {
-        position: static;
-    }
+    // .bordered {
+    //     position: static;
+    // }
 }
 
 .media,
@@ -1574,8 +1578,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* ==========================================================================
-    One serial
+/*  One serial
 ========================================================================== */
 
 .title-main{
@@ -2002,6 +2005,53 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 14px;
 }
 
+/* News
+========================================================================== */
+
+.block-one-news {
+    position: relative;
+    margin-bottom: 10px;
+    .media {
+        margin-top: 10px;
+    }
+     .img {
+        margin-right: 20px;
+     }
+
+     .bd {
+        padding-top: 0;
+        p {
+            font-size: 13px;
+            margin-bottom: 5px;
+            line-height: 18px;
+        }
+    }
+}
+
+.block-links {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 170px;
+    text-align: right;
+
+    a {
+        .inline-block;
+        position: static;
+    }
+
+    .bookmark {
+        margin-right: 10px;
+        font-size: 12px;
+        span {
+            vertical-align: top;
+        }
+
+        .icon-comment {
+            background-position: -20px 4px;
+        }
+    }
+}
 
 /* PAGINATION
 ========================================================================== */
