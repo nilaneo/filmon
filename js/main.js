@@ -31,4 +31,11 @@ $(document).ready(function(){
 		$(this).toggleClass("is-checked");
 	});
 
+	// Toggle dropdown user menu
+
+	$(".j-toggle-usermenu").on("click", function (e) {
+		e.preventDefault();
+		$(".user-menu-dropdown").slideToggle("fast");
+	});
+
 });
