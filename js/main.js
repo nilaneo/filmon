@@ -38,4 +38,13 @@ $(document).ready(function(){
 		$(".user-menu-dropdown").slideToggle("fast");
 	});
 
+	// Gallery slider
+
+	$(".jcarousel-for-gallery .lnk-slide").on("click", function (e) {
+		e.preventDefault();
+		console.log('xoxoxo');
+		$(this).parents(".jcarousel-for-gallery").find(".lnk-slide").removeClass("is-active");
+		$(this).addClass("is-active");
+	});
+
 });

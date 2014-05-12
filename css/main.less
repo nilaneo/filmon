@@ -289,6 +289,14 @@ img {
     background-position: -84px -231px;
 }
 
+.icon-glass {
+    width: 18px;
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+    background-position: -72px -265px;
+}
+
 .lnk-primary {
     font-size: 14px;
     font-family: 'ClearSansRegular', Helvetica, Arial, sans-serif;
@@ -2197,6 +2205,30 @@ img {
     }
 }
 
+.gallery-item {
+    position: relative;
+    .block-shadowed;
+    padding: 5px 10px 15px;
+    border: 3px solid @yellow;
+    margin-bottom: 30px;
+    background-color: @white;
+    z-index: 1;
+
+    img {
+        margin: 15px auto 25px;
+    }
+
+    .control-prev {
+        .jcarousel-small-control-prev;
+        left: -25px;
+    }
+
+    .control-next {
+        .jcarousel-small-control-next;
+        right: -23px
+    }
+}
+
 /* PAGINATION
 ========================================================================== */
 
@@ -2895,6 +2927,40 @@ img {
             .opacity(.5);
         }
     }
+}
+
+/* Small Carousel (4 slides)
+========================================================================== */
+
+.jcarousel-small-4-wrapper {
+    .jcarousel-small-wrapper;
+    top: 3px;
+    width: 1010px;
+    height: 327px;
+    z-index: 2;
+    .jcarousel-small{
+        height: 327px;
+        ul li {
+            height: 327px;
+            margin-right: 58px;
+        }
+    } 
+}
+
+.jcarousel-for-gallery {
+
+    .lnk-slide.is-active {
+        .slide-small:after {
+            .icon;
+            content: '';
+            width: 24px;
+            height: 22px;
+            background-position: -56px -165px;
+            position: absolute;
+            left: 50%;
+            margin-left: -17px;
+        }
+    }    
 }
 
 /* Small Carousel (5 slides)
