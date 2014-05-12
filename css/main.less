@@ -239,6 +239,10 @@ img {
     padding: 15px;
 }
 
+.pdt-15 {
+    padding-top: 15px;
+}
+
 .border-dark {
     border: 1px solid #cfd2d4 !important;
 }
@@ -1848,9 +1852,26 @@ img {
 .panel-yellow {
     background-color: @yellow;
     .panel-menu {
+
         li:before {
             border-right: 1px solid #ffe57a;
             background-color: #e9aa00;
+        }
+
+        .is-actve {
+            position: relative;
+        }
+
+        .is-active:after {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 7px 7px 7px;
+            border-color: transparent transparent #054674 transparent;
         }
     }
 }
@@ -2152,6 +2173,28 @@ img {
     padding-top: 10px;
     text-align: center;
     line-height: 22px;
+}
+
+
+/* Gallery
+========================================================================== */
+
+.list-gallery {
+    li {
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 50px;
+        .block-white-bordered;
+    }
+
+    li:nth-child(3n) {
+        margin-right: 0;
+    }
+
+    li:hover {
+        border: 3px solid @yellow;
+        .opacity(.6);
+    }
 }
 
 /* PAGINATION
