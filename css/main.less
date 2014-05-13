@@ -1017,6 +1017,18 @@ img {
     .title-main-bg  {
         background-color: @background-color;
     }
+
+    .title-section {
+        background-color: #e2e4e5;
+    }
+
+    .block-border-top {
+        border-top: 2px solid #e2e4e5;
+    }
+
+    .freespace {
+       border: 1px solid #e2e4e5;
+    }
 }
 
 .block-white {
@@ -2229,6 +2241,80 @@ img {
         .jcarousel-small-control-next;
         right: -23px
     }
+}
+
+/* Awards
+========================================================================== */
+
+.block-award-info {
+    margin-bottom: 65px;
+
+    .cell {
+        height: 158px;
+        vertical-align: middle;
+        font-size: 15px;
+        line-height: 23px;
+    }
+
+    .award-titles {
+        width: 60px;
+        padding: 5px 15px;
+        background-color: @yellow;
+        color: #1e557d;
+        text-shadow: 0 -1px #fffc00;
+        .box-shadow(1px 0 3px #ddd);
+    }
+
+    .award-info {
+        width: 360px;
+        padding: 5px 10px 5px 60px;
+    }
+
+    .award-picture {
+        width: 210px;
+        padding-right: 20px;
+        img {
+            float: right;
+        }
+    }
+}
+
+.list-awards {
+
+    li {
+        margin-top: 50px;
+
+        .title-main-bg {
+            font-family: 'ClearSansBold', Helvetica, Arial, sans-serif;
+            font-weight: normal;
+        }
+
+        .media {
+            .list-6.media;
+        }
+
+        .bd-title {
+            font-size: 15px;
+            font-family: 'ClearSansBold', Helvetica, Arial, sans-serif;
+        }
+    }
+}
+
+.years-cols {
+    padding: 10px 0;
+}
+
+.list-years {
+    float: left;
+    padding-left: 48px;
+
+    a {
+        .lnk-primary;
+    }
+}
+
+.list-years.first {
+    padding-left: 3px;
 }
 
 /* PAGINATION
