@@ -3,6 +3,9 @@ $(document).ready(function(){
 
 	$(".slide-video").on("click", function (e) {
 		e.preventDefault();
+		$(this).parents("ul").find(".slide-video").removeClass("is-active");
+		$(this).addClass("is-active");
+		$(this).prev(".slide-video a").css("border-bottom", "none");		
 		var activeSlide = $(this).data("slide-small");
 		$(".slides-video-big li").removeClass("is-active");
 		$(".slides-video-big").find("." + activeSlide + "-big").addClass("is-active");
@@ -42,7 +45,6 @@ $(document).ready(function(){
 
 	$(".jcarousel-for-gallery .lnk-slide").on("click", function (e) {
 		e.preventDefault();
-		console.log('xoxoxo');
 		$(this).parents(".jcarousel-for-gallery").find(".lnk-slide").removeClass("is-active");
 		$(this).addClass("is-active");
 	});

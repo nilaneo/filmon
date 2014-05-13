@@ -231,6 +231,10 @@ img {
     margin-bottom: 70px !important;
 }
 
+.mt-70 {
+    margin-top: 70px;
+}
+
 .pd-0 {
     padding: 0 !important;
 }
@@ -1600,8 +1604,8 @@ img {
 /* Slider-vertical
 ========================================================================== */
 
-.slider-vertical.gray-area {
-    padding: 25px 0 50px;
+.gray-area-no-top {
+    .gray-area;
 
     &:before {
         display: none;
@@ -1610,6 +1614,11 @@ img {
     h1 {
         margin: 0 0 10px 10px;
     }
+}
+
+.slider-vertical.gray-area {
+    .gray-area-no-top;
+    padding: 25px 0 50px;
 }
 
 .slider-vertical {
@@ -2317,7 +2326,7 @@ img {
     td {
         vertical-align: text-top;
     }
-    
+
     tbody {
         border-top: 2px solid #ededf4;
         border-bottom: 2px solid #ededf4;
@@ -3174,7 +3183,7 @@ img {
     overflow: hidden;
 }
 
-.jcarousel-5 ul {
+.jcarousel-5-wide ul {
     width: 10000px;
     position: relative;
     list-style: none;
@@ -3215,20 +3224,92 @@ img {
     }
 }
 
-.jcarousel-5-control-prev,
-.jcarousel-5-control-next {
+.jcarousel-5-wide-control-prev,
+.jcarousel-5-wide-control-next {
     top: 42% !important;
 }
 
-.jcarousel-5-control-prev {
+.jcarousel-5-wide-control-prev {
     .jcarousel-control-prev;
     left: -20px;
 }
 
-.jcarousel-5-control-next {
+.jcarousel-5-wide-control-next {
     .jcarousel-control-next;
     right: -15px;
 }
+
+/* Small Carousel (5 slides) - WIDE
+========================================================================== */
+
+.jcarousel-5-wide-wrapper {
+    position: relative;
+    height: 180px;
+    width: 980px;
+}
+
+.jcarousel-5-wide {
+    .jcarousel-5;
+}
+
+.jcarousel-5-wide ul {
+
+    li {
+        width: 160px;
+        height: 180px;
+        margin-right: 40px;
+        margin-left: 2px;
+        padding-top: 3px;
+    }
+
+    .slide-small {
+        width: 162px;
+        height: 124px;
+    }
+
+    .slide-small-text {
+        position: absolute;
+        left: -3px;
+        bottom: -63px;
+        width: 162px;
+        height: 60px;
+        padding: 5px;
+        color: @black;
+        line-height: 14px;
+        font-size: 11px;
+        font-family: 'ClearSansMedium', Helvetica, Arial, sans-serif;
+        background-color: transparent;
+    }
+
+    .slide-small:hover,
+    .slide-small.is-active {
+        border: 3px solid #FFCC00;
+         .slide-small-text {
+            background-color: @yellow;
+            color: #054674;
+         }
+    }
+}
+
+.jcarousel-5-wide-control-prev,
+.jcarousel-5-wide-control-next {
+    top: 38% !important;
+}
+
+.jcarousel-5-wide-control-prev {
+    .jcarousel-control-prev;
+    left: -20px;
+}
+
+.jcarousel-5-wide-control-next {
+    .jcarousel-control-next;
+    right: -15px;
+}
+
+.slider-shows {
+    padding: 0 18px 20px;
+}
+
 
 /* Medium Carousel (2 slides)
 ========================================================================== */
@@ -3333,6 +3414,35 @@ img {
         .video-name {
             color: @white;
             text-decoration: none;
+        }
+    }
+}
+
+.v-jcarousel-text-only  ul {
+    li {
+        height: 68px;
+        padding: 0;
+        padding-left: 20px;
+
+        a { 
+            display: block;
+            width: 300px;
+            line-height: 70px;
+            text-decoration: none !important;
+            border-bottom: 2px solid #e2e4e5;
+            color: #010101;
+        }
+    }
+
+    li:first-child {
+        a {
+            border-top: 2px solid #e2e4e5;
+        }
+    }
+
+    .is-active {
+        a {
+            border: none !important;
         }
     }
 }

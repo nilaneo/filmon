@@ -67,6 +67,16 @@
 
     $('.jcarousel-5-control-next').jcarouselControl({target: "+=1"});
 
+    /* Small slider - 5 slides -wide*/
+
+    $('.jcarousel-5-wide')
+        .jcarousel({wrap: "circular"})
+        .jcarouselAutoscroll({interval: 5000, autostart: false});
+
+    $('.jcarousel-5-wide-control-prev').jcarouselControl({target: "-=1"});
+
+    $('.jcarousel-5-wide-control-next').jcarouselControl({target: "+=1"});
+
 
     /* Medium slider - 2 slides */
 
