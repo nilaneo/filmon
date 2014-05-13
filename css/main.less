@@ -1644,9 +1644,12 @@ img {
 /*  One serial
 ========================================================================== */
 
-.title-main{
+.title-main {
     .title-22;
     margin-bottom: 5px;
+    font-family: 'ClearSansBold', Helvetica, Arial, sans-serif;
+    font-weight: normal;
+
     ins {
         .icon;
         width: 10px;
@@ -2247,6 +2250,85 @@ img {
 ========================================================================== */
 
 .block-award-info {
+    width: 364px;
+    float: left;
+    margin-bottom: 35px;
+    .cell {
+        height: 60px;
+        padding: 0 15px;    
+        vertical-align: middle;
+    }
+
+    .award-name {
+        height: 34px;
+        line-height: 34px;
+        padding: 0 15px;
+        background-color: @yellow;
+        color: #1e557d;
+        text-shadow: 0 -1px #fffc00;
+    }
+
+    .award-info {
+        .cell-1 {
+            width: 130px;
+        }
+    }
+}
+
+.img-award {
+    float: right;
+    padding: 0 0 25px 20px;
+}
+
+.text-with-bullets {
+    ul {
+        list-style-type: disc;
+        padding-left: 15px;
+    }
+
+    li {
+        color: #a9b0b3;
+        margin-top: 35px;
+        p {
+            color: @black;
+            text-align: justify;
+        }
+    }
+
+    li:first-child {
+        margin-top: 0;
+    }
+}
+
+.table-striped {
+    width: 664px;
+    th, td {
+        height: 60px;
+        padding: 15px;
+        text-align: left;
+    }
+
+    th {
+        vertical-align: middle;
+        font-weight: normal;
+        .text-gray;
+    }
+
+    td {
+        vertical-align: text-top;
+    }
+    
+    tbody {
+        border-top: 2px solid #ededf4;
+        border-bottom: 2px solid #ededf4;
+        tr:nth-child(2n+1) {
+            background-color: @white;
+        }
+    }
+
+}
+
+.block-award-info-year {
     margin-bottom: 65px;
 
     .cell {
