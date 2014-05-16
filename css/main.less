@@ -219,6 +219,10 @@ img {
     margin-bottom: 0 !important;
 }
 
+.mb-10 {
+    margin-bottom: 10px !important;
+}
+
 .mb-20 {
     margin-bottom: 20px !important;
 }
@@ -1130,7 +1134,7 @@ img {
     }
 
     .freespace {
-       border: 1px solid #e2e4e5;
+       border: 1px solid #dadada;
     }
 }
 
@@ -1186,7 +1190,7 @@ img {
 }
 
 .title-section-thinner {
-    margin: 15px 0;
+    margin: 20px 0;
 }
 
 .title-section-label {
@@ -1469,6 +1473,10 @@ img {
     .container {
         padding-top: 0;
     }
+
+    .freespace {
+       border: 1px solid #DADADA;
+    }
 }
 
 .gray-area-no-bottom {
@@ -1480,6 +1488,12 @@ img {
 .lnk-slide {
     display: block;
     .transition(all .3);
+}
+
+li:hover {
+    .lnk-slide {
+        .opacity(.6);
+    }
 }
 
 .slide {
@@ -1733,7 +1747,7 @@ img {
 .slides-video-big {
     position: relative;
     width: 667px;
-    height: 350px;
+    height: 355px;
     list-style: none;
     li {
         display: none;
@@ -1997,14 +2011,15 @@ img {
             background-color: #e9aa00;
         }
 
-        .is-actve {
+        .is-active {
             position: relative;
+            color: #054674;
         }
 
         .is-active:after {
             position: absolute;
-            left: 50%;
-            bottom: 0;
+            left: 36%;
+            bottom: -14px;
             content: '';
             width: 0;
             height: 0;
@@ -2556,7 +2571,7 @@ img {
         margin-right: 3px;
     }
 
-    a {
+    a, .ellipsis {
         padding: 0 7px;
         color: @light-blue;
         font-size: 15px;
@@ -2844,12 +2859,12 @@ img {
 .socials-quantity {
     position: relative;
     display: inline-block;
-    height: 20px;
+    height: 21px;
     line-height: 19px;
     vertical-align: text-top;
     padding: 0 5px;
     margin-left: 5px;
-    margin-top: -5px;
+    margin-top: -7px;
     background-color: @white;
     font-size: 12px;
     color: #054674;
@@ -3372,6 +3387,8 @@ img {
     }
 
     .slide-small-5:hover {
+
+        border: 3px solid @yellow;
         .slide-small-title a {
             color: @dark-blue-3;
         }
@@ -3521,12 +3538,13 @@ img {
 ========================================================================== */
 
 .v-jcarousel-wrapper {
-    height: 350px;
+    height: 356px;
 }
 
 .v-jcarousel {
     position: relative;
     overflow: hidden;
+    height: 356px;
 }
 
 .v-jcarousel ul {
@@ -3537,7 +3555,7 @@ img {
     padding: 0;
 
     li {
-        height: 87px;
+        height: 80px;
         padding: 4px 0 4px 20px;
         margin-bottom: 1px;
         box-sizing: content-box;

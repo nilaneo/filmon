@@ -67,7 +67,7 @@
 
     $('.jcarousel-5-control-next').jcarouselControl({target: "+=1"});
 
-    /* Small slider - 5 slides -wide*/
+    /* Small slider - 5 slides - wide*/
 
     $('.jcarousel-5-wide')
         .jcarousel({wrap: "circular"})
