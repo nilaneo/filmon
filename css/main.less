@@ -127,7 +127,7 @@ body {
     background-color: @white;
     color: @text;
     font-family: 'ClearSansRegular', Helvetica, Arial, sans-serif;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .page-wrapper {
@@ -219,6 +219,10 @@ img {
     margin-bottom: 0 !important;
 }
 
+.mb-20 {
+    margin-bottom: 20px !important;
+}
+
 .mb-30 {
     margin-bottom: 30px !important;
 }
@@ -301,6 +305,13 @@ img {
     background-position: -72px -265px;
 }
 
+.icon-arrow-white {
+    width: 6px;
+    height: 10px;
+    margin-left: 10px;
+    background-position: -64px -50px;
+}
+
 .lnk-primary {
     font-size: 14px;
     font-family: 'ClearSansRegular', Helvetica, Arial, sans-serif;
@@ -317,6 +328,10 @@ img {
     color: @black;
     font-family: 'ClearSansBold', Helvetica, Arial, sans-serif;
     text-decoration: underline;
+}
+
+.lnk-title:hover {
+    color: @dark-blue-3;
 }
 
 .title-big {
@@ -456,9 +471,11 @@ img {
 
 .img-bordered {
     border: 3px solid @white;
-    &:hover {
-        border: 3px solid @light-blue;
-    }
+}
+
+.img-bordered:hover,
+.img-bordered.hover {
+    border: 3px solid @light-blue;
 }
 
 .input-primary {
@@ -542,6 +559,12 @@ img {
 }
 
 .search-wrapper {
+    position: relative;
+}
+
+.search-input {
+    position: absolute;
+    z-index: 10;
     width: 400px;
     height: 32px;
     padding: 0 15px;
@@ -563,6 +586,66 @@ img {
         font-size: 14px;
         font-family: 'ClearSansMedium', Helvetica, Arial, sans-serif;
     }
+}
+
+.search-wrapper.is-open {
+
+    input {
+        color: @black;
+    }
+
+    .search-input {
+        border: 1px solid #787878;
+        background-color: @white;
+    }
+}
+
+.search-results {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 95px;
+    width: 400px;
+    padding-top: 15px;
+    z-index: 5;
+    background-color: @white;
+    .box-shadow(0 0 4px rgba(0, 0, 0, .3));
+}
+
+.search-results-list-small {
+    li {
+        padding: 7px 15px;
+        border-top: 2px solid #e9ebec;
+
+        .media {
+            padding: 0;
+
+            .img {
+                margin: 2px 15px 2px 2px;
+            }
+
+            .bd {
+                padding-top: 15px;
+            }
+        }
+    }
+
+    li:first-child {
+        border-top: 0;
+    }
+}
+
+.btn-show-all {
+    display: block;
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    background-color: #19b6e1;
+    font-size: 14px;
+    font-family: 'ClearSansBold', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    color: @white;
+    text-align: center;
 }
 
 .header-user-menu {
@@ -822,6 +905,7 @@ img {
         font-size: 14px;
         font-family: 'ClearSansMedium', Helvetica, Arial, sans-serif;
         border-top: 3px solid #183051;
+        .transition(all .3s);
 
         &:after {
             position: absolute;
@@ -835,6 +919,10 @@ img {
             background-color: @dark-blue-2;
             content: "";
         }
+    }
+
+    a:hover {
+        color: @white;
     }
 
     li:last-child {
@@ -1209,7 +1297,7 @@ img {
 .block-tabs-right-big {
     background-color: #f9f9fb;
     .bookmark {
-        bottom: -50px;
+        bottom: -60px;
     }
 
     .block-tabs-left {
@@ -1305,7 +1393,7 @@ img {
 .list-items {
     list-style: none;
     li {
-        padding: 15px 15px 0 20px;
+        padding: 10px 15px 0 20px;
 
         &:after {
             .separator;
@@ -2423,6 +2511,36 @@ img {
     padding-left: 3px;
 }
 
+/* Search results
+========================================================================== */
+
+.search-request {
+    margin-bottom: 20px;
+    color: @black;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    .scada;
+
+    .search {
+        display: inline-block;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 20px;
+        margin-right: 20px;
+        background-color: #19b6e1;
+        color: @white;
+        text-shadow: 0 1px #1388a9;
+    }
+
+    .results-quanity {
+        color: #a9b0b3;
+        font-family: 'ClearSansRegular', Helvetica, Arial, sans-serif;
+        font-weight: normal;
+        text-transform: none;
+    }
+}
+
 /* PAGINATION
 ========================================================================== */
 
@@ -2610,6 +2728,27 @@ img {
             p {
                 font-size: 14px;
             }
+        }
+    }
+}
+
+.list-7 {
+    .list-6;
+    .media .bd {
+        padding-top: 15px;
+    }
+}
+
+.list-8 {
+    .list-5;
+
+    li {
+        padding-left: 0;
+        .bd-title {
+            line-height: 16px;
+        }
+        .img {
+            margin-right: 20px;
         }
     }
 }

@@ -1,4 +1,32 @@
 $(document).ready(function(){
+
+	// Search
+
+	$(".search-wrapper input").on("click", function (e) {
+		$(".search-wrapper").addClass("is-open");
+	});
+
+	$(".search-wrapper input").on("change", function (e) {
+		$(".search-results").slideDown();
+	});
+
+	// List items
+
+	$(".list-items .lnk-title").on("click", function (e) {
+		e.preventDefault();
+		$(this).closest(".list-items").find("li").removeClass("is-active");
+		$(this).closest("li").addClass("is-active");
+	});
+
+	// List-2 
+
+	$(".list-2 .bd-title").hover(function (e) {
+		$(this).closest(".media").find(".img-bordered").addClass("hover");
+	},
+	function (e) {
+		$(this).closest(".media").find(".img-bordered").removeClass("hover");
+	});
+
 	// Slider-video
 
 	$(".slide-video").on("click", function (e) {
