@@ -294,11 +294,19 @@ img {
     vertical-align: middle;
 }
 
+.lnk-all:hover .icon-edit {
+    background-position: -66px -348px;
+}
+
 .icon-arrow-left-medium {
     width: 16px;
     height: 15px;
     vertical-align: middle;
     background-position: -84px -231px;
+}
+
+.lnk-primary:hover .icon-arrow-left-medium {
+    background-position: -84px -248px;
 }
 
 .icon-glass {
@@ -307,6 +315,19 @@ img {
     margin-right: 5px;
     vertical-align: middle;
     background-position: -72px -265px;
+}
+
+.lnk-primary:hover .icon-glass {
+    background-position: -71px -296px;
+}
+
+.icon-glass-minus {
+    .icon-glass;
+    background-position: -71px -370px;
+}
+
+.lnk-primary:hover .icon-glass-minus {
+    background-position: -70px -401px;
 }
 
 .icon-arrow-white {
@@ -699,10 +720,14 @@ img {
         vertical-align: middle;
     }
 
+    a:hover {
+        color: @white;
+    }
+
     .avatar {
-        margin-right: 10px;
-        width: 30px;
-        height: 33px;
+        margin-right: 15px;
+        width: 36px;
+        height: 36px;
     }
 
     .user-name {
@@ -720,7 +745,7 @@ img {
 .user-menu-dropdown {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 84%;
     right: -8px;
     width: 120px;
     padding: 10px;
@@ -1161,7 +1186,7 @@ img {
 
 .block-lower {
     padding: 10px 15px;
-    margin-top: 48px;
+    margin-top: 70px;
 }
 
 .block-text {
@@ -1249,6 +1274,12 @@ img {
         margin: 0 0 1px 1px;
         background-position: -75px 0;
         vertical-align: text-bottom;
+    }
+}
+
+.lnk-all-small:hover {
+    ins {
+        background-position: -62px -327px;
     }
 }
 
@@ -2056,7 +2087,7 @@ li:hover {
 
 .avatar {
     border-width: 3px;
-    boredr-style: solid;
+    border-style: solid;
     border-color: @white;
     .block-shadowed;
     box-sizing: content-box !important;
@@ -2079,7 +2110,6 @@ li:hover {
 .avatar-big {
     .avatar;
     border-width: 5px;
-    padding: 5px 0;
     margin-bottom: 5px;
 
     img {
@@ -2358,10 +2388,6 @@ li:hover {
     background-color: @white;
     z-index: 1;
 
-    img {
-        margin: 15px auto 25px;
-    }
-
     .control-prev {
         .jcarousel-small-control-prev;
         left: -25px;
@@ -2371,6 +2397,14 @@ li:hover {
         .jcarousel-small-control-next;
         right: -23px
     }
+}
+
+.img-gallery-big {
+    margin: 15px auto 25px;
+}
+
+.j-zoom-out-image {
+    display: none;
 }
 
 /* Awards
@@ -3336,6 +3370,18 @@ li:hover {
             }
         }
     }
+
+    li:hover {
+        .lnk-slide {
+            .opacity(1);            
+        }
+
+        .slide-small {
+            img {
+                .opacity(.6);
+            }
+        }
+    }
 }
 
 /* Small Carousel (5 slides)
@@ -3425,7 +3471,13 @@ li:hover {
 
 .jcarousel-5-wide ul {
 
+    width: 100000px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+
     li {
+        float: left;
         width: 160px;
         height: 180px;
         margin-right: 40px;

@@ -45,13 +45,13 @@ $(document).ready(function(){
 		function() {
 			$(this).addClass("block-shadowed");
 			$(this).children("a").addClass("is-open");
-			$(this).find(".nav-inner").show();
+			$(this).find(".nav-inner").finish().slideDown("fast");
 		},
 
 		function() {
 			$(this).removeClass("block-shadowed");
-			$(this).find(".nav-inner").hide();
 			$(this).children("a").removeClass("is-open");
+			$(this).find(".nav-inner").finish().slideUp("fast");
 		}
 	);
 
@@ -77,4 +77,38 @@ $(document).ready(function(){
 		$(this).addClass("is-active");
 	});
 
+	// Gallery - zoom image
+
+
+	function adjustWindow(){
+		var screenHeight = $(window).height() - 100;
+
+		$(".img-gallery-big").height(screenHeight);		
+	}
+
+	var imgHeight = $(".img-gallery-big").height(),
+		imgWidth = $(".img-gallery-big").width();
+
+		console.log(imgHeight, imgWidth);
+
+	adjustWindow();
+	$(window).resize(function(){
+		adjustWindow();
+	})
+
+	$(".j-zoom-in-image").on("click", function (e) {
+		e.preventDefault();
+		$(this).hide();
+		$(".j-zoom-out-image").show();
+
+		$(".img-gallery-big").css({"max-width": "960px", "height": "" + 960*imgHeight/imgWidth + "px"});
+	});
+
+	$(".j-zoom-out-image").on("click", function (e) {
+		e.preventDefault();
+		$(this).hide;
+		$(".j-zoom-in-image").show();
+
+		adjustWindow();
+	});
 });
