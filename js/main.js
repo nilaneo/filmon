@@ -79,17 +79,17 @@ $(document).ready(function(){
 
 	// Gallery - zoom image
 
+	var imgHeight = $(".img-gallery-big").height(),
+		imgWidth = $(".img-gallery-big").width();
 
 	function adjustWindow(){
 		var screenHeight = $(window).height() - 100;
 
-		$(".img-gallery-big").height(screenHeight);		
+		console.log(imgHeight, screenHeight);
+
+		$(".img-gallery-big").height(Math.min(imgHeight, screenHeight));		
 	}
 
-	var imgHeight = $(".img-gallery-big").height(),
-		imgWidth = $(".img-gallery-big").width();
-
-		console.log(imgHeight, imgWidth);
 
 	adjustWindow();
 	$(window).resize(function(){
