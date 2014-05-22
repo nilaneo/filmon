@@ -1238,7 +1238,6 @@ img {
     .title-main-bg {
         background-color: @background-color;
     }
-
 }
 
 .block-shadowed {
@@ -1718,14 +1717,7 @@ li:hover {
 }
 
 .slides-border-top {
-    li {
-        margin-left: 70px !important;
-    }
-
-    li:first-child {
-        margin-left: 0 !important;
-    }
-
+    
     .slide-small {
         width: 200px;
         border: none;
@@ -1838,6 +1830,63 @@ li:hover {
         content: "";
         width: 18px;
         height: 24px;
+    }
+}
+
+.block-alphabet {
+    .pd-15;
+    .block-shadowed;
+    .block-white;
+    padding-top: 20px;
+    border: 3px solid @yellow;
+    margin-bottom: 50px;
+}
+
+.list-letters {
+    .list-inline;
+    margin-bottom: 15px;
+    text-align: center;
+    li {
+        color: #a9b0b3;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    a, span {
+        padding: 0 4px;
+        font-family: 'ClearSansMedium', Helvetica, Arial, sans-serif;
+    }
+
+    a {
+        .lnk-primary;
+    }
+
+    a:hover {
+        background-color: @light-blue;
+        color: @white;
+    }
+}
+
+.chosen-letter {
+    position: relative;
+    height: 2px;
+    margin: 35px 0 20px;
+    background-color: #e9ebec;
+
+    span {
+        position: absolute;
+        top: -18px;
+        left: 50%;
+        margin-left: -35px;
+        width: 69px;
+        height: 36px;
+        padding-top: 2px;
+        background: url(../img/bg-letter.jpg);
+        text-align: center;
+        color: #054674;
+        font-family: 'ClearSansBold', Helvetica, Arial, sans-serif;
+        font-size: 22px;
     }
 }
 
@@ -2202,7 +2251,7 @@ li:hover {
 
 .block-border-top {
     border-top: 2px solid #e9ebec;
-    padding-top: 20px;
+    padding-top: 25px;
 }
 
 /* User settings
@@ -2479,12 +2528,11 @@ li:hover {
 /* Gallery
 ========================================================================== */
 
-.list-gallery {
+.list-3-cols {
     li {
         float: left;
-        margin-right: 20px;
-        margin-bottom: 50px;
-        .block-white-bordered;
+        margin-right: 30px;
+        margin-bottom: 80px;
     }
 
     li:nth-child(3n) {
@@ -2492,8 +2540,21 @@ li:hover {
     }
 
     li:hover {
-        border: 3px solid @yellow;
         .opacity(.75);
+    }
+}
+
+.list-gallery {
+    .list-3-cols;
+
+    li {
+        margin-right: 20px;
+        margin-bottom: 50px;
+        .block-white-bordered;
+    }
+
+    li:hover {
+        border: 3px solid @yellow;
     }
 }
 
@@ -3160,6 +3221,10 @@ li:hover {
         position: relative;
         float: left;
         margin-left: 62px;
+    }
+
+    .slides-border-top li {
+        margin-left: 70px;
     }
 
     li:hover {
