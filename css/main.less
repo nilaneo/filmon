@@ -1710,6 +1710,31 @@ li:hover {
     .slide-small-title;
 }
 
+.slides-border-top {
+    li {
+        margin-left: 70px !important;
+    }
+
+    li:first-child {
+        margin-left: 0 !important;
+    }
+
+    .slide-small {
+        width: 200px;
+        border: none;
+        border-top: 3px solid transparent;
+        .box-shadow(none);
+    }
+
+    .lnk-slide {
+        margin-bottom: 15px;
+    }
+
+    .slide-small:hover {
+        border-top: 3px solid @yellow;
+    }
+}
+
 .block-rek {
     padding: 9px;
     border: 1px solid #e5e7e8;
