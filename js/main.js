@@ -27,6 +27,14 @@ $(document).ready(function(){
 		$(this).closest(".media").find(".img-bordered").removeClass("hover");
 	});
 
+	// Sidebar-title-tabs
+
+	$(".sidebar-title-tabs a").on("click", function (e) {
+		e.preventDefault();
+		$(this).closest(".sidebar-title-tabs").find("a").removeClass("is-active");
+		$(this).addClass("is-active");
+	});
+
 	// Slider-video
 
 	$(".slide-video").on("click", function (e) {
