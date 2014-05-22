@@ -309,6 +309,19 @@ img {
     background-position: -84px -231px;
 }
 
+.icon-arrow-right-small {
+    .icon;
+    width: 10px;
+    height: 14px;
+    margin: 0 0 1px 1px;
+    background-position: -75px 0;
+    vertical-align: text-bottom;
+
+    &:hover {
+        background-position: -62px -327px;
+    }
+}
+
 .lnk-primary:hover .icon-arrow-left-medium {
     background-position: -84px -248px;
 }
@@ -342,13 +355,24 @@ img {
 }
 
 .lnk-primary {
-    font-size: 14px;
+    font-size: 13px;
     font-family: 'ClearSansRegular', Helvetica, Arial, sans-serif;
     color: @light-blue;
     text-decoration: underline;
 
     &:hover {
         color: @dark-blue-3;
+    }
+}
+
+.list-links {
+    margin-top: 5px;
+    li:before {
+        .icon-arrow-right-small;
+        content: "";
+        margin-left: -3px;
+        margin-right: 5px;
+        vertical-align: middle;
     }
 }
 
@@ -1296,12 +1320,7 @@ img {
     font-size: 12px;
 
     ins {
-        .icon;
-        width: 10px;
-        height: 14px;
-        margin: 0 0 1px 1px;
-        background-position: -75px 0;
-        vertical-align: text-bottom;
+        .icon-arrow-right-small;
     }
 }
 
@@ -1974,6 +1993,15 @@ li:hover {
 
 .award:hover .block-award {
     display: table-row;
+}
+
+.country {
+    font-size: 15px;
+    margin: 10px 0 10px -5px;
+    img { 
+            display: inline-block;
+            vertical-align: middle;
+        }
 }
 
 .raiting-wrapper {
