@@ -106,7 +106,7 @@ $(document).ready(function(){
 
 	$(".j-zoom-out-image").on("click", function (e) {
 		e.preventDefault();
-		$(this).hide;
+		$(this).hide();
 		$(".j-zoom-in-image").show();
 
 		adjustWindow();
