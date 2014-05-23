@@ -216,6 +216,11 @@ img {
     display: none;
 }
 
+.centered {
+    margin: 0 auto;
+    text-align: center;
+}
+
 .block-up {
     margin-top: -25px !important;
 }
@@ -377,12 +382,6 @@ img {
 .list-links {
     margin-top: 5px;
     li {
-        // .icon-arrow-right-small;
-        // content: "";
-        // margin-left: -3px;
-        // margin-right: 5px;
-        // vertical-align: middle;
-
         padding-left: 10px;
         background: url(../img/arrow-right.png) no-repeat 0 6px;
     }
@@ -3459,6 +3458,10 @@ li:hover {
         display: inline-block;
     }
 
+    p {
+        margin-bottom: 20px;
+    }
+
     .label {
         width: 65px;
     }
@@ -3468,7 +3471,7 @@ li:hover {
     }
 
     .input-wrapper {
-        margin-top: 18px;
+        margin-bottom: 20px;
     }
 
     .pd-l {
@@ -3483,13 +3486,18 @@ li:hover {
         }
     }
 
+    .no-after {
+        &:after {
+            display: none;
+        }
+    }
+
     .custom-checkbox {
         display: block;
-        margin-top: 20px;
     }
 
     .btn-cancel {
-        margin-left: 60px;
+        margin-right: 10px;
     }
 
     .buttons {

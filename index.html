@@ -973,7 +973,7 @@
             </div>
         </footer>
 
-        <div class="popup popup-authorization">
+        <div class="popup popup-authorization hidden">
             <header class="header-popup">
                 <h1>Авторизация</h1>
             </header>
@@ -992,7 +992,7 @@
                     <a href="#0" class="custom-checkbox"><ins></ins>Запомнить меня</a>
                     <div class="buttons">
                         <button class="btn-primary">Создать профайл</button>
-                        <button class="btn-primary btn-cancel">Отмена</button>
+                        <button class="btn-primary btn-cancel rigth">Отмена</button>
                     </div>
                     <a href="#0" class="lnk-primary">Забыли пароль?</a>
                 </div>
@@ -1021,6 +1021,43 @@
                 </ul>
             </div>
         </div><!-- end of popup popup-authorization -->
+
+        <div class="popup popup-recovery hidden">
+            <header class="header-popup">
+                <h1>Восстановление пароля</h1>
+            </header>
+            <div class="popup-container">
+                <p>
+                    Для того, чтобы восстановить пароль, пожалуйста, введите E-mail, который Вы указывали при регистрации
+                </p>
+                <div class="input-wrapper">
+                    <span class="msg-error hidden">неверные данные</span>
+                    <label class="label">E-mail:</label>
+                    <input type="text" class="input-primary">
+                </div>
+                <div class="pd-l no-after">
+                    <div class="buttons">
+                        <button class="btn-primary">Восстановить</button>
+                        <button class="btn-primary btn-cancel right">Отмена</button>
+                    </div>
+                    <a href="#0" class="lnk-primary">Авторизироваться</a>
+                </div>                
+            </div>
+        </div><!-- end of popup popup-recovery -->
+
+        <div class="popup popup-recovery-success">
+            <header class="header-popup">
+                <h1>Восстановление пароля</h1>
+            </header>
+            <div class="popup-container">
+                <p>
+                    На указанный Вами адрес было отправлено письмо с дальнейшими указаниями по восстановлению
+                </p>
+                <div class="centered">
+                    <button class="btn-primary btn-cancel">Закрыть</button>
+                </div>
+            </div>
+        </div><!-- end of popup popup-recovery-success -->
 
         <script src="js/vendor/jquery-1.10.2.min.js"></script>
         <script src="js/main.js"></script>
