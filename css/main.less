@@ -503,6 +503,11 @@ img {
     }
 }
 
+.text-blue {
+    font-size: 14px;
+    color: @light-blue;
+}
+
 .separated {
     margin: 15px 0;
 }
@@ -638,7 +643,8 @@ img {
 .header,
 .footer,
 .gray-area,
-.blue-area {
+.blue-area,
+.wrapper {
     width: 1090px;
     margin: 0 auto;
 }
@@ -912,7 +918,8 @@ img {
         .scada;
     }
 
-    a:hover {
+    a:hover,
+    li.is-active a {
         border-bottom: 3px solid @light-blue;
     }
 }
@@ -1971,10 +1978,6 @@ li:hover {
     }
 }
 
-.slide-video {
-    cursor: pointer;
-}
-
 /*  One serial
 ========================================================================== */
 
@@ -2248,6 +2251,78 @@ li:hover {
             border-width: 0 7px 7px 7px;
             border-color: transparent transparent @dark-blue-4 transparent;
         }
+    }
+}
+
+/* Schedule
+========================================================================== */
+
+.wrapper-schedule {
+    margin-top: 15px;
+}
+
+.title-rectangle {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+    margin: 0;
+    background-color: @dark-blue-4;
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+.title-rectangle,
+.title-rectangle a {
+    .title-18;
+    .scada;
+    font-weight: bold;
+    color: @white;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .75);
+}
+
+.list-schedule {
+    border-top: 3px solid @light-blue;
+
+    li {
+        float: left;
+        width: 50%;
+        padding: 0 14px;
+        padding-bottom: 0;
+
+        >div {
+            display: table-cell;
+            vertical-align: middle;
+            width: 300px;
+            height: 90px;
+            padding: 5px 0;
+            border-top: 2px solid #e2e4e5;
+        }
+
+        h4 a {
+            font-size: 14px;
+            font-family: 'ClearSansMedium', Helvetica, Arial, sans-serif;
+            font-weight: normal;
+        }
+    }
+
+    li:first-child,
+    li:first-child + li {
+        >div {
+            border-top: none;
+        }
+    }
+}
+
+.episode-heading {
+    .cell {
+        width: 150px;
+    }
+
+    .episode-date {
+        text-align: right;
     }
 }
 
@@ -4003,7 +4078,7 @@ li:hover {
 }
 
 .v-jcarousel-text-only {
-    height: 362px;
+    height: 355px;
 }
 
 .v-jcarousel-text-only  ul {
@@ -4036,6 +4111,47 @@ li:hover {
     }
 }
 
+.slides-with-bodrers {
+    &:after {
+        display: block;
+        content: "";
+        width: 300px;
+        margin-left: 20px;
+        height: 0;
+        border-top: 2px solid #e2e4e5;
+    }
+}
+
+.v-jcarousel-multiline-text {
+    li {
+        height: 88px !important;
+        padding: 0 24px 0 20px !important;
+        .video-name {
+            font-size: 18px !important;
+        }
+
+        .video-title-lnk {
+            display: block !important;
+            padding-top: 5px;
+            border-top: 2px solid #e2e4e5;
+            p {
+                font-size: 13px;
+            }
+        }
+    }
+
+    li:hover,
+    .is-active {
+        a, p {
+            color: @white;
+        }
+
+        .video-title-lnk {
+            border-top: none;
+        }
+    }    
+}
+
 .v-jcarousel-control-prev,
 .v-jcarousel-control-next {
     position: absolute;
@@ -4064,7 +4180,7 @@ li:hover {
 }
 
 .v-jcarousel-control-next {
-    bottom: 10px;
+    bottom: 2px;
     span {
         background-position: -51px -92px;
     }
